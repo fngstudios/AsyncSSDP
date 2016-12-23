@@ -27,7 +27,7 @@ License (MIT license):
 */
 #define LWIP_OPEN_SRC
 #include <functional>
-#include "ESP8266SSDP.h"
+#include "AsyncSSDP.h"
 #include "WiFiUdp.h"
 #include "debug.h"
 

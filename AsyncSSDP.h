@@ -26,8 +26,8 @@ License (MIT license):
 
 */
 
-#ifndef ESP8266SSDP_H
-#define ESP8266SSDP_H
+#ifndef AsyncSSDP_H
+#define AsyncSSDP_H
 
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
