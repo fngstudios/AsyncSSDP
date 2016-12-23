@@ -30,7 +30,7 @@ License (MIT license):
 #include "AsyncSSDP.h"
 #include "WiFiUdp.h"
 #include "debug.h"
-
+#include <FS.h>
 extern "C" {
   #include "osapi.h"
   #include "ets_sys.h"

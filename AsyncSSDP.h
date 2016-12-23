@@ -32,7 +32,7 @@ License (MIT license):
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
-
+#include <FS.h>
 class UdpContext;
 
 #define SSDP_UUID_SIZE              37
