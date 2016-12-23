@@ -349,7 +349,7 @@ void SSDPClass::_update(){
   }
 
 }
-uint8_t checkSchemaFile(){
+uint8_t SSDPClass::checkSchemaFile(){
 
     if (SPIFFS.exists("/description.xml")) {
       return 1;
@@ -359,8 +359,8 @@ uint8_t checkSchemaFile(){
 
 }
 
-void createSchemaFile();
-void updateSchemaFile();
+void SSDPClass::createSchemaFile(){}
+void SSDPClass::updateSchemaFile(){}
 
 
 
