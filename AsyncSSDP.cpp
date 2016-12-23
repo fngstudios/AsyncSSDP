@@ -382,17 +382,6 @@ uint8_t SSDPClass::checkSchemaFile(){
 
 }
 
-uint8_t SSDPClass::createSchemaFile(){
-  File schema = SPIFFS.open("/description.xml", "w");
-
-  if (!schema) {
-    schema.close();
-    return 0;
-  }else{
-    schema.close();
-    return 1;
-  }
-
 }
 void SSDPClass::updateSchemaFile(){
 
@@ -417,7 +406,6 @@ void SSDPClass::updateSchemaFile(){
     _manufacturerURL,
     _uuid
   );
-
     schema.close();
 }
 
