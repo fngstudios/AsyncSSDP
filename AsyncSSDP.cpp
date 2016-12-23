@@ -376,6 +376,11 @@ void SSDPClass::updateSchemaFile(){
   File schema = SPIFFS.open("/description.xml", "w");
 
   uint32_t ip = WiFi.localIP();
+  uint32_t chipId = ESP.getChipId();
+  sprintf(_uuid, "38323636-4558-4dda-9188-cda0e6%02x%02x%02x",
+    (uint16_t) ((chipId >> 16) & 0xff),
+    (uint16_t) ((chipId >>  8) & 0xff),
+    (uint16_t)   chipId        & 0xff  );
   schema.printf(_ssdp_schema_template,
     IP2STR(&ip), _port,
     _deviceType,
