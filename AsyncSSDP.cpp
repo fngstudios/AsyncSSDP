@@ -44,7 +44,7 @@ extern "C" {
 #include "lwip/mem.h"
 #include "include/UdpContext.h"
 
- #define DEBUG_SSDP  Serial
+// #define DEBUG_SSDP  Serial
 
 #define SSDP_INTERVAL     1200
 #define SSDP_PORT         1900
