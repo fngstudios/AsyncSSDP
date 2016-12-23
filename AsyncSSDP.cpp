@@ -382,7 +382,6 @@ uint8_t SSDPClass::checkSchemaFile(){
 
 }
 
-}
 void SSDPClass::updateSchemaFile(){
 
   File schema = SPIFFS.open("/description.xml", "w");
