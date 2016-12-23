@@ -349,6 +349,20 @@ void SSDPClass::_update(){
   }
 
 }
+uint8_t checkSchemaFile(){
+
+    if (SPIFFS.exists("/description.xml")) {
+      return 1;
+    }else{
+      return 0;
+    }
+
+}
+
+void createSchemaFile();
+void updateSchemaFile();
+
+
 
 void SSDPClass::setSchemaURL(const char *url){
   strlcpy(_schemaURL, url, sizeof(_schemaURL));
