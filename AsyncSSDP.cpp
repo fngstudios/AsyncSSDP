@@ -103,6 +103,29 @@ static const char* _ssdp_schema_template =
   "</root>\r\n"
   "\r\n";
 
+  static const char* _ssdp_schema_file_template =
+    "<?xml version=\"1.0\"?>"
+    "<root xmlns=\"urn:schemas-upnp-org:device-1-0\">"
+      "<specVersion>"
+        "<major>1</major>"
+        "<minor>0</minor>"
+      "</specVersion>"
+      "<URLBase>http://%u.%u.%u.%u:%u/</URLBase>" // WiFi.localIP(), _port
+      "<device>"
+        "<deviceType>%s</deviceType>"
+        "<friendlyName>%s</friendlyName>"
+        "<presentationURL>%s</presentationURL>"
+        "<serialNumber>%s</serialNumber>"
+        "<modelName>%s</modelName>"
+        "<modelNumber>%s</modelNumber>"
+        "<modelURL>%s</modelURL>"
+        "<manufacturer>%s</manufacturer>"
+        "<manufacturerURL>%s</manufacturerURL>"
+        "<UDN>uuid:%s</UDN>"
+      "</device>"
+    "</root>\r\n"
+    "\r\n";
+
 
 struct SSDPTimer {
   ETSTimer timer;
@@ -381,7 +404,7 @@ void SSDPClass::updateSchemaFile(){
     (uint16_t) ((chipId >> 16) & 0xff),
     (uint16_t) ((chipId >>  8) & 0xff),
     (uint16_t)   chipId        & 0xff  );
-  schema.printf(_ssdp_schema_template,
+  schema.printf(_ssdp_schema_file_template,
     IP2STR(&ip), _port,
     _deviceType,
     _friendlyName,
