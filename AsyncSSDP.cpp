@@ -371,7 +371,27 @@ uint8_t SSDPClass::createSchemaFile(){
   }
 
 }
-void SSDPClass::updateSchemaFile(){}
+void SSDPClass::updateSchemaFile(){
+
+  File schema = SPIFFS.open("/description.xml", "w");
+
+  uint32_t ip = WiFi.localIP();
+  schema.printf(_ssdp_schema_template,
+    IP2STR(&ip), _port,
+    _deviceType,
+    _friendlyName,
+    _presentationURL,
+    _serialNumber,
+    _modelName,
+    _modelNumber,
+    _modelURL,
+    _manufacturer,
+    _manufacturerURL,
+    _uuid
+  );
+
+    schema.close();
+}
 
 
 
