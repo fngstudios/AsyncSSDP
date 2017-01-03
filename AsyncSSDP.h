@@ -91,7 +91,7 @@ class SSDPClass{
     void setTTL(uint8_t ttl);
 
   protected:
-    void _send(ssdp_method_t method);
+    void _send(ssdp_method_t method,  char* st, char *usn);
     void _update();
     void _startTimer();
     static void _onTimerStatic(SSDPClass* self);
