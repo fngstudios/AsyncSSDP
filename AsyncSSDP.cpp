@@ -351,7 +351,7 @@ void SSDPClass::_update(){
 
                 // if the search type matches our type, we should respond instead of ABORT
                 if((strcmp(buffer, "upnp:rootdevice") == 0) || (strcmp(buffer, uuid_buffer) == 0)) {
-                  DEBUG_SSDP.printf("ACCEPT: %s\n", (char *)buffer);
+//                  DEBUG_SSDP.printf("ACCEPT: %s\n", (char *)buffer);
                   _pending = true;
                   _process_time = millis();
                   state = KEY;
