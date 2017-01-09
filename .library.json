@@ -1,28 +1,28 @@
 {
-    "name": "AsyncSSDP", 
+    "name": "AsyncSSDP",
     "repository": {
-        "url": "https://github.com/fngstudios/AsyncSSDP.git", 
+        "url": "https://github.com/fngstudios/AsyncSSDP.git",
         "type": "git"
-    }, 
+    },
     "platforms": [
         "*"
-    ], 
+    ],
     "frameworks": [
         "arduino"
-    ], 
-    "version": "0.1", 
+    ],
+    "version": "0.1",
     "authors": [
         {
-            "maintainer": false, 
-            "name": "fngStudios", 
-            "url": "https://github.com/fngstudios", 
+            "maintainer": false,
+            "name": "fngStudios",
+            "url": "https://github.com/fngstudios",
             "email": null
         }
-    ], 
+    ],
     "keywords": [
-        "Energy", 
+        "Energy",
         "mewSystem"
-    ],  
-    "description": "ADE7758 interface library to be improoved since this uses no interrupts.",
+    ],
+    "description": "Sets a description.xml file in SPIFFS in order to make ssdp work with asynctcp and asyncwebserver",
 	"examples": "examples/*/*.ino"
 }
